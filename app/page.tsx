@@ -14,19 +14,19 @@ export default function Home() {
   const navItems = [
     {
       name: "About us",
-      link: "/about",
+      link: "#about",
     },
     {
       name: "Features",
-      link: "/features",
+      link: "#features",
     },
     {
       name: "Use Cases",
-      link: "/usecases",
+      link: "#usecases",
     },
     {
       name: "Pricing",
-      link: "/pricing",
+      link: "#pricing",
     }
   ];
   const slideData = [
@@ -34,31 +34,37 @@ export default function Home() {
       title: "",
       button: "Read more",
       src: "/assets/c1.png",
+      link:"/feature1",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c2.png",
+      link:"/feature6",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c3.png",
+      link:"/feature5",
     },
     {
       title: "",
       button: "Read more",
-      src: "/assets/c4.png"
+      src: "/assets/c4.png",
+      link:"/feature4",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c5.png",
+      link:"/feature3",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c6.png",
+      link:"/feature2",
     }
   ];
   return (
@@ -66,7 +72,7 @@ export default function Home() {
      <FloatingNav navItems={navItems} className="lato-font" />
 
      <TextHoverEffect text="UXSCOUT" duration={0.01}/> 
-    <div className=" flex flex-row items-center justify-center">
+    <div id="about" className=" flex flex-row items-center justify-center">
       <div className="flex-[50%] flex flex-col color-[#F5F5F5] Fraunces-font">
       <h1 className="Fraunces-font text-7xl/[109px] text-left ml-12 mr-12 relative z-10">
   Optimize Your Website
@@ -125,7 +131,7 @@ export default function Home() {
       </div>
     </div>
     {/* =========================================================================== */}
-    <h1 className="Fraunces-font text-left text-7xl/[109px] text-white w-[95%] z-10 relative mb-8">
+    <h1 id="features" className="Fraunces-font text-left text-7xl/[109px] text-white w-[95%] z-10 relative mb-8">
     What UX Scout
       <span className="ml-4"> 
         <Image
@@ -139,9 +145,9 @@ export default function Home() {
     {/* ============================================================================= */}
     <Carousel slides={slideData}  />
     {/* ===================================================================================== */}
-    <h1 className="Fraunces-font text-right text-7xl/[109px] text-white w-[95%] z-10 relative mb-8 mt-12 mr-8"> How UX Scout Helps You</h1>
+    <h1 id="usecases" className="Fraunces-font text-right text-7xl/[109px] text-white w-[95%] z-10 relative mb-8 mt-12 mr-8"> How UX Scout Helps You</h1>
     {/*=============================================*/  }
-    <ul className="grid grid-cols-1 h-full grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4   xl:grid-rows-2">
+    <ul className=" ml-12 grid grid-cols-1 h-full grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4   xl:grid-rows-2">
     <GridItem
     area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
     icon={
@@ -188,7 +194,7 @@ export default function Home() {
       />
  
       <GridItem
-        area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
+        area="md:[grid-area:2/7/3/12] xl:[grid-area:1/8/2/12]"
         icon={
           <Image 
             className="h-4 w-4 text-[#F5F5F5] dark:text-neutral-400" 
@@ -203,10 +209,10 @@ export default function Home() {
       />
  
       <GridItem
-        area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+        area="md:[grid-area:3/1/4/12] xl:[grid-area:2/8/3/12]"
         icon={
           <Image 
-            className="h-4 w-4 text-[#F5F5F5] dark:text-neutral-400" 
+            className="h-4 w-4 text-[#F5F5F5] dark:text-neutral-400 " 
             src="/assets/icon5.png" 
             alt="icon 1" 
             width={4} 
@@ -217,6 +223,9 @@ export default function Home() {
         description="Identify and resolve friction in the onboarding process to reduce drop-offs and improve user retention."
       />
       </ul>
+      <div className="mt-10 text-[#1A1A1C]">
+        hehe
+      </div>
       </div>
   );
 }
