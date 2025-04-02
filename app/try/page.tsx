@@ -51,7 +51,7 @@ export default function TryPage() {
     e.preventDefault();
     if (!inputValue.trim()) return;
     
-    const baseUrl = 'https://ea70-128-185-112-57.ngrok-free.app';
+    const baseUrl = 'https://f9fb-128-185-112-57.ngrok-free.app';
   
     try {
       await fetch(baseUrl, {
