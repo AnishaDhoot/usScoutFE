@@ -1,0 +1,27 @@
+{
+    "url": "https://example.com",
+    "images": {
+      "root": {
+        "url": "https://storage.googleapis.com/ux-scout/root-image-1.jpg",
+        "text": "This is the main hero section of the homepage. Our analysis shows:\n\n1. The CTA button has low contrast (45:1 ratio)\n2. Image load time is 2.3s (should be <1s)\n3. Text overlaps with background on mobile viewports\n4. 78% of users scroll past this section without engaging"
+      },
+      "rest": [
+        {
+          "url": "https://storage.googleapis.com/ux-scout/nav-image-1.jpg",
+          "text": "Navigation analysis:\n\n- Dropdown menus have 320ms delay (recommended <150ms)\n- 42% of mobile users abandon during menu interaction\n- Primary nav items have 4.2:1 contrast ratio (should be at least 4.5:1)"
+        },
+        {
+          "url": "https://storage.googleapis.com/ux-scout/product-grid-1.jpg",
+          "text": "Product grid findings:\n\n1. Card hover effects increase engagement by 28%\n2. Missing price labels on 3/8 product cards\n3. Filter options load asynchronously causing layout shift\n4. Average time to select first product: 9.2s"
+        },
+        {
+          "url": "https://storage.googleapis.com/ux-scout/checkout-1.jpg",
+          "text": "Checkout flow issues:\n\n- Form field validation happens only on submit (should be real-time)\n- 34% abandonment at payment step\n- Trust badges are below the fold on mobile\n- Guest checkout option increases conversions by 22%"
+        },
+        {
+          "url": "https://storage.googleapis.com/ux-scout/footer-1.jpg",
+          "text": "Footer recommendations:\n\n1. Newsletter signup converts at 1.2% (industry avg: 3.5%)\n2. Social icons are 28px (recommended 32-40px)\n3. Missing sitemap link\n4. Copyright info uses 10px font (should be ≥12px)"
+        }
+      ]
+    }
+  }

@@ -3,6 +3,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export const FloatingNav = ({
   navItems,
@@ -36,6 +37,15 @@ export const FloatingNav = ({
           className
         )}
       >
+        <div>
+          <Image 
+            src="/assets/logo.png"
+            width={100}
+            height={100}
+            className="h-10 w-10"
+            alt="logo"
+          />
+        </div>
         {/* Centered Navigation Links */}
         <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-4 font-[helvetica] ">
           {navItems.map((navItem, idx) => (
