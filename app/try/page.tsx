@@ -14,9 +14,9 @@ export default function TryPage() {
     "Can I get a free trial of UX Scout?",
   ];
   const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [responseData, setResponseData] = useState(null);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState("");
+  // const [responseData, setResponseData] = useState(null);
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,10 +27,7 @@ export default function TryPage() {
     e.preventDefault();
     if (!inputValue.trim()) return;
     
-    setIsLoading(true);
-    setError("");
-    setResponseData(null);
-
+   
     try {
       // Test if the backend is reachable first
       await fetch('https://9ee9-128-185-112-57.ngrok-free.app', {
@@ -56,15 +53,10 @@ export default function TryPage() {
         const errorText = await response.text();
         throw new Error(errorText || `HTTP error! status: ${response.status}`);
       }
-
-      const data = await response.json();
-      setResponseData(data);
-      console.log('API Response:', data);
+  
+      console.log('API Response:', await response.json());
     } catch (error) {
-      console.error('API Error:', error);
-      setError(error instanceof Error ? error.message : 'Failed to analyze URL');
-    } finally {
-      setIsLoading(false);
+      console.error('API Error:', error instanceof Error ? error.message : 'Failed to analyze URL');
     }
   };
 
@@ -80,7 +72,7 @@ export default function TryPage() {
           Experience the power of smart UX insights with UX Scout. Our platform
           automatically maps your website, detects user friction points, and
           provides ranked solutions to improve engagement and conversions.
-          Whether you're optimizing for better navigation, higher retention, or
+          Whether you&apos;re optimizing for better navigation, higher retention, or
           improved SEO, UX Scout gives you the data-driven roadmap to success.
         </h2>
         <h3 className="font-[helvetica] text-xl sm:text-2xl mt-8 px-4 sm:px-12">
@@ -89,7 +81,7 @@ export default function TryPage() {
         </h3>
       </div>
 
-      <div className="w-full mb-85 z-10">
+      <div className="w-full mb-80 z-10">
         <PlaceholdersAndVanishInput
           placeholders={placeholders}
           onChange={handleChange}

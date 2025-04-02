@@ -1,14 +1,11 @@
 import Image from "next/image";
 import {TextHoverEffect} from "../components/ui/text-hover-effect";
 import { FloatingNav } from "../components/ui/floating-navbar";
-import { link } from "fs";
 import heropageimage from "@/app/assets/heropageimage.png"
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import round from "@/app/assets/round.png";
 import under from "@/app/assets/under.png";
 import Carousel from "../components/ui/carousel";
-import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { GridItem } from "@/components/ui/glowing-effect";
 import star from "@/app/assets/star.png";
 export default function Home() {
@@ -69,8 +66,8 @@ export default function Home() {
     }
   ];
   return (
-    <div className="bg-[#1A1A1C] text-white text-center  flex flex-col items-center justify-center">
-     <FloatingNav navItems={navItems} className="lato-font" />
+    <div className="bg-[#1A1A1C] text-white text-center  flex flex-col items-center justify-center scrollbar-hide">
+     <FloatingNav navItems={navItems} className="lato-font scrollbar-hide" />
 
      <TextHoverEffect text="UXSCOUT" duration={0.01}/> 
     <div id="about" className=" flex flex-row items-center justify-center">
@@ -91,19 +88,19 @@ export default function Home() {
       <CardContainer className="inter-var dark lato-font">
       <CardBody className="bg-[#36141d] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#2B1C20] dark:border-[#C3073F]/[0.2] border-[#C3073F]/[0.1] border-2 w-[75%] ml-2 sm:w-[30rem] h-auto rounded-xl p-8 border  ">
         <CardItem
-          translateZ="50"
+          translateZ={40}
           className="text-2xl font-bold text-neutral-600 dark:text-white font-[helvetica] "
         >
           Know more about us 
         </CardItem>
         <CardItem
           as="p"
-          translateZ="60"
+          translateZ={60}
           className="text-neutral-500 text-lg text-left max-w-sm mt-2 dark:text-neutral-300 font-[helvetica] "
         >
        At UX Scout, we help businesses create seamless digital experiences by identifying user friction points and providing actionable solutions.
         </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
+        <CardItem translateZ={100} className="w-full mt-4">
           <Image
             src={heropageimage}
             height="1000"
@@ -112,19 +109,13 @@ export default function Home() {
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            className="px-4 py-2 rounded-xl text-md font-[helvetica]  dark:text-white"
-          >
-           <a href="/try"> Try now →</a>
-          </CardItem>
+        <div className="flex justify-right items-center mt-20">
           <CardItem
             translateZ={20}
             as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-[#4E4E50] font-[helvetica]  dark:text-white dark:border-white dark:border-1 text-white text-md font-bold"
+            className="px-4 py-2 rounded-xl bg-black dark:bg-[#4E4E50] font-[helvetica]  align-right dark:text-white dark:border-white ml-auto dark:border-1 text-white text-md font-bold"
           >
-            Sign up
+           <a href="/try"> Try now →</a>
           </CardItem>
         </div>
       </CardBody>

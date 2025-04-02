@@ -46,7 +46,7 @@ export default function FeaturePage() {
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/assets/p4c.png"
+            src="/assets/f4a.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
