@@ -27,9 +27,7 @@ export default function TryPage() {
     e.preventDefault();
     if (!inputValue.trim()) return;
     
-    setIsLoading(true);
-    setError("");
-    setResponseData(null);
+    
   
     // Define the base URL consistently
     const baseUrl = ' https://ea70-128-185-112-57.ngrok-free.app';
