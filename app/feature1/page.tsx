@@ -14,10 +14,10 @@ export default function FeaturePage() {
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f1b.png"
             width={300}
             height={300}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-fill"
             alt="linear board demo"
           />
         </div>
@@ -30,7 +30,7 @@ export default function FeaturePage() {
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f1c.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -46,7 +46,7 @@ export default function FeaturePage() {
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f1a.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"

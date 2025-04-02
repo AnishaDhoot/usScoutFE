@@ -84,23 +84,23 @@ export default function Home() {
   , Keep Visitors Engaged
 </h1>
 
-        <h2 className=" lato-font text-3xl/[40px] text-left ml-12 mr-12 mt-4">UX Scout maps your entire site, highlights user struggles, and provides ranked solutions to boost conversions effortlessly.</h2>
+        <h2 className=" font-[helvetica]  text-3xl/[40px] text-left ml-12 mr-12 mt-4">UX Scout maps your entire site, highlights user struggles, and provides ranked solutions to boost conversions effortlessly.</h2>
       </div>
       <div className="flex-[50%]">
       <CardContainer className="inter-var dark lato-font">
-      <CardBody className="bg-[#2B1C20] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#2B1C20] dark:border-[#C3073F]/[0.2] border-[#C3073F]/[0.1] border-2 w-[75%] ml-2 sm:w-[30rem] h-auto rounded-xl p-8 border  ">
+      <CardBody className="bg-[#36141d] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#2B1C20] dark:border-[#C3073F]/[0.2] border-[#C3073F]/[0.1] border-2 w-[75%] ml-2 sm:w-[30rem] h-auto rounded-xl p-8 border  ">
         <CardItem
           translateZ="50"
-          className="text-2xl font-bold text-neutral-600 dark:text-white"
+          className="text-2xl font-bold text-neutral-600 dark:text-white font-[helvetica] "
         >
           Know more about us 
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-lg max-w-sm mt-2 dark:text-neutral-300"
+          className="text-neutral-500 text-lg text-left max-w-sm mt-2 dark:text-neutral-300 font-[helvetica] "
         >
-        Hover over this card to unleash the power of CSS perspective Hover over this card to unleash the power of CSS perspective
+       At UX Scout, we help businesses create seamless digital experiences by identifying user friction points and providing actionable solutions.
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
@@ -114,14 +114,14 @@ export default function Home() {
         <div className="flex justify-between items-center mt-20">
           <CardItem
             translateZ={20}
-            className="px-4 py-2 rounded-xl text-md font-normal dark:text-white"
+            className="px-4 py-2 rounded-xl text-md font-[helvetica]  dark:text-white"
           >
-            Try now →
+           <a href="/try"> Try now →</a>
           </CardItem>
           <CardItem
             translateZ={20}
             as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-[#4E4E50] dark:text-white dark:border-white dark:border-1 text-white text-md font-bold"
+            className="px-4 py-2 rounded-xl bg-black dark:bg-[#4E4E50] font-[helvetica]  dark:text-white dark:border-white dark:border-1 text-white text-md font-bold"
           >
             Sign up
           </CardItem>
@@ -137,7 +137,7 @@ export default function Home() {
         <Image
           src={under}
           alt="under"
-          className="absolute z-[-1] top-[35%] left-[38%] transform -translate-x-1/3 h-[70%] w-[10%]" 
+          className="absolute z-[-1] top-[35%] left-[36.5%] transform -translate-x-1/3 h-[70%] w-[10%]" 
         />
       </span>
       Does for You

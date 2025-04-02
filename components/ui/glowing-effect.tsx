@@ -198,7 +198,7 @@ interface GridItemProps {
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
   return (
     <li className={`min-h-[14rem] list-none ${area}`}>
-      <div className="relative h-full w-full rounded-2.5xl m-8 bg-[#2B1C20]  p-2  md:rounded-3xl md:p-3">
+      <div className="relative h-full w-full rounded-2.5xl m-8 bg-[#36141d]  p-2  md:rounded-3xl md:p-3">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -212,11 +212,11 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
               {icon}
             </div>
             <div className="space-y-3">
-              <h3 className=" text-left font-[600px] text-[32px] lato-font text-[#F5F5F5] dark:text-white mb-6">
+              <h3 className=" text-left font-[600px] text-[32px] font-[helvetica]  font-bold text-[#F5F5F5] dark:text-white mb-6">
                 {title}
               </h3>
               <h2
-                className="lato-font text-left  text-[22px] font-[400px] text-[#F5F5F5] dark:text-[#F5F5F5]"
+                className="font-[helvetica] text-left  text-[22px] font-[400px] text-[#F5F5F5] dark:text-[#F5F5F5]"
               >
                 {description}
               </h2>

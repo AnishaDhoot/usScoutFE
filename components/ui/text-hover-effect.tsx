@@ -32,12 +32,12 @@ export const TextHoverEffect = ({
       ref={svgRef}
       width="100%" // Ensure it takes up the full container width
       height="100%" // Make the height dynamic as well
-      viewBox="0 0 350 110" // Adjusting the viewBox to better fit the content
+      viewBox="0 0 350 60" // Adjusting the viewBox to better fit the content
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
-      className="select-none text-center self-center"
+      className="select-none text-center self-center mt-20"
     >
       <defs>
         <linearGradient
