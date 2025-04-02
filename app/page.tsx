@@ -10,6 +10,7 @@ import Carousel from "../components/ui/carousel";
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { GridItem } from "@/components/ui/glowing-effect";
+import star from "@/app/assets/star.png";
 export default function Home() {
   const navItems = [
     {
@@ -24,47 +25,47 @@ export default function Home() {
       name: "Use Cases",
       link: "#usecases",
     },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    }
+    // {
+    //   name: "Pricing",
+    //   link: "#pricing",
+    // }
   ];
   const slideData = [
     {
       title: "",
       button: "Read more",
       src: "/assets/c1.png",
-      link:"/feature1",
+      link:"/CWCN",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c2.png",
-      link:"/feature6",
+      link:"/CQAR",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c3.png",
-      link:"/feature5",
+      link:"/USASA",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c4.png",
-      link:"/feature4",
+      link:"/PMO",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c5.png",
-      link:"/feature3",
+      link:"/UAE",
     },
     {
       title: "",
       button: "Read more",
       src: "/assets/c6.png",
-      link:"/feature2",
+      link:"/UBEA",
     }
   ];
   return (
@@ -145,7 +146,14 @@ export default function Home() {
     {/* ============================================================================= */}
     <Carousel slides={slideData}  />
     {/* ===================================================================================== */}
-    <h1 id="usecases" className="Fraunces-font text-right text-7xl/[109px] text-white w-[95%] z-10 relative mb-8 mt-12 mr-8"> How UX Scout Helps You</h1>
+    <h1 id="usecases" className="Fraunces-font text-right text-7xl/[109px] text-white w-[95%] z-10 relative mb-8 mt-12 mr-8"> How UX Scout
+    <span className="ml-4"> 
+    <Image
+          src={star}
+          alt="under"
+          className="absolute z-[-1] top-[-10%] left-[88%] transform -translate-x-1/3 h-[52%] w-[6%]" 
+        />
+          </span>Helps You</h1>
     {/*=============================================*/  }
     <ul className=" ml-12 grid grid-cols-1 h-full grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4   xl:grid-rows-2">
     <GridItem

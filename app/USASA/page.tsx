@@ -10,11 +10,11 @@ export default function FeaturePage() {
     {
       title: "",
       description:
-        "UX Scout evaluates your website’s underlying code, identifying areas that could impact performance or user experience. By analyzing code quality, it helps ensure that your site is clean, efficient, and free from technical issues that may slow down performance or cause errors.",
+        "UX Scout provides detailed insights into how users interact with your site, tracking key stats like page views, session duration, and engagement rates. This helps you understand how visitors navigate your content and what keeps them interested.",
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f5a.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -26,11 +26,11 @@ export default function FeaturePage() {
     {
       title: "",
       description:
-        "Based on this analysis, UX Scout provides actionable recommendations for improving your site’s functionality. Whether it’s optimizing code for faster load times, simplifying complex scripts, or fixing broken elements, the tool offers clear steps to enhance your site’s technical foundation.",
+        "The attention span analysis focuses on how long users stay engaged with specific pages or sections. By identifying where attention drops off, you can pinpoint areas of your site that may need clearer messaging or more compelling content to hold user interest.",
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f5b.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -42,11 +42,11 @@ export default function FeaturePage() {
     {
       title: "",
       description:
-        "With these recommendations, you can improve not only the user experience but also the long-term maintainability of your website, ensuring it remains fast, reliable, and scalable.",
+        "With these insights, you can tailor your content and design to better capture and retain your audience’s attention, ultimately improving user experience and boosting conversions.",
       content: (
         <div className="flex h-full w-full items-center justify-center text-white">
           <Image
-            src="/linear.webp"
+            src="/assets/f5c.png"
             width={300}
             height={300}
             className="h-full w-full object-cover"
@@ -73,7 +73,7 @@ export default function FeaturePage() {
             }}
             className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent text-white md:text-7xl"
           >
-          Code Quality &<br />Actionable Recommendations
+          User Stats &<br />Attention Span Analysis
           </motion.h1>
         </LampContainer>
       </div>

@@ -13,38 +13,62 @@ export default function TryPage() {
     "Is UX Scout free to use?",
     "Can I get a free trial of UX Scout?",
   ];
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [responseData, setResponseData] = useState(null);
 
-  const [inputValue, setInputValue] = React.useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
-    console.log(e.target.value);
   };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("submitted");
+    if (!inputValue.trim()) return;
     
+    setIsLoading(true);
+    setError("");
+    setResponseData(null);
+
     try {
-      const response = await fetch('http://localhost:3001/analyse', {
+      // Test if the backend is reachable first
+      await fetch('https://9ee9-128-185-112-57.ngrok-free.app', {
+        method: 'HEAD',
+        headers: {
+          'ngrok-skip-browser-warning': 'true',
+        },
+      }).catch(() => {
+        throw new Error("Backend server is not reachable");
+      });
+
+      // Make the actual request
+      const response = await fetch('https://ea70-128-185-112-57.ngrok-free.app/analyse', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true',
         },
-        body: JSON.stringify({
-          url: inputValue,
-        }),
+        body: JSON.stringify({ url: inputValue }),
       });
+
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        const errorText = await response.text();
+        throw new Error(errorText || `HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-      console.log('Success:', data);
+      setResponseData(data);
+      console.log('API Response:', data);
     } catch (error) {
-      console.error('Error:', error);
+      console.error('API Error:', error);
+      setError(error instanceof Error ? error.message : 'Failed to analyze URL');
+    } finally {
+      setIsLoading(false);
     }
   };
+
+  
 
   return (
     <div className="relative flex flex-col items-center justify-between min-h-screen px-6 text-center bg-[#1A1A1C] text-white overflow-hidden">

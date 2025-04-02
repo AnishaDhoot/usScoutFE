@@ -42,7 +42,7 @@ export const FloatingNav = ({
         {/* Right Section - Login Button */}
         <div className="ml-auto">
           <button className="border text-sm font-[helvetica]  font-medium relative bg-[#4E4E50] border-white rounded-md text-white px-4 py-2 rounded-full">
-            <span>Login</span>
+            <a href="/try"><span>Try Now</span></a>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
           </button>
         </div>
