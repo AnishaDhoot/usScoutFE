@@ -30,10 +30,13 @@ export default function TryPage() {
     setIsLoading(true);
     setError("");
     setResponseData(null);
-
+  
+    // Define the base URL consistently
+    const baseUrl = ' https://ea70-128-185-112-57.ngrok-free.app';
+  
     try {
       // Test if the backend is reachable first
-      await fetch('https://9ee9-128-185-112-57.ngrok-free.app', {
+      await fetch(baseUrl, {
         method: 'HEAD',
         headers: {
           'ngrok-skip-browser-warning': 'true',
@@ -41,9 +44,9 @@ export default function TryPage() {
       }).catch(() => {
         throw new Error("Backend server is not reachable");
       });
-
-      // Make the actual request
-      const response = await fetch('https://ea70-128-185-112-57.ngrok-free.app/analyse', {
+  
+      // Make the actual request to the same base URL
+      const response = await fetch(`${baseUrl}/analyse`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,12 +54,12 @@ export default function TryPage() {
         },
         body: JSON.stringify({ url: inputValue }),
       });
-
+  
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(errorText || `HTTP error! status: ${response.status}`);
       }
-
+  
       const data = await response.json();
       setResponseData(data);
       console.log('API Response:', data);
@@ -67,7 +70,6 @@ export default function TryPage() {
       setIsLoading(false);
     }
   };
-
   
 
   return (
